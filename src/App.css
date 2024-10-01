@@ -41,3 +41,20 @@ nav ul li a{
 div h2{
   align-items: center;
 } 
+
+.cardsProduct{
+  
+  display:inline-block;
+  background-color: rgb(235, 231, 229);
+  text-align: center;
+  margin-left: 90px;
+
+}
+
+.cardsProduct img{
+  width:80%; 
+    height:80%; 
+    margin: 10%;
+    margin-left: 10%;
+    justify-content: center;
+}
