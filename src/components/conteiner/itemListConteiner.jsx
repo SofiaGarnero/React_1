@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import { getProducts } from "../../data/asyncmock";
+import { getProducts } from "../data/asynmock";
 
 
 
@@ -11,11 +11,11 @@ const ItemListContainer = ({ categoria }) => {
 
   const { idCategory } = useParams()
 
-      // // useEffect(() => {
-      // //     getProducts(idCategory)
-      // //      .then(res => setList(res))
-      // //      .catch(err => console.log(err))
-      // // }, [])
+       useEffect(() => {
+           getProducts(idCategory)
+          .then(res => setList(res))
+           .catch(err => console.log(err))
+     }, [])
 
 console.log("parametros :", idCategory)
 

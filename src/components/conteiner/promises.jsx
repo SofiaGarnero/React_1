@@ -5,8 +5,8 @@ import { getProducts,getProductsFilter, productos } from "../data/asynmock";
 
 
 const Promises = () => {
-    const[itemList, setList] = useState()
-    const [cargando, setCargando]= useState(true)
+     const[itemList, setList] = useState()
+    //const [cargando, setCargando]= useState(true)
 
      //const getProducts = new Promise((resolve, rejected) => {
         // const productos = [
@@ -61,18 +61,19 @@ const Promises = () => {
     //           .finally(() => setCargando(false))
     //   }, [])
 
-      useEffect(() => {
-               getProductsFilter()
-                  .then(res => setList(res))
-                  .catch(e => console.error(e))
-                   .finally(() => setCargando(false))
-           }, [])
+      // useEffect(() => {
+      //          getProductsFilter()
+      //             //.then(res => setList(res))
+      //             .catch(e => console.error(e))
+      //              .finally(() => setCargando(false))
+      //      }, [])
 
     return (
         <div>
-            {cargando? 'Cargando...' : getProductsFilter?.CardProducto }
-            {/* {JSON.stringify(products)} */}
-          {itemList?.map((pr) => <CardProducto key={pr.id} prInfo={pr} />)}
+            {/* {cargando? 'Cargando...' : getProductsFilter?.CardProducto }
+            {JSON.stringify(CardProducto)}  */}
+           {itemList?.map((pr) => <productos key={pr.id} prInfo={pr} />)} 
+          
         </div>
     )
 

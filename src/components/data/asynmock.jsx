@@ -38,27 +38,41 @@ export const productos = [
     ]
     
    
-   export const getProducts = new Promise((resolve, reject) => {
+//    export const getProducts = new Promise((resolve, reject) => {
 
-    // const getProducts = (idCategory) => {
-    //     console.log("id category desde asynckmock", idCategory)
-    // } 
-        setTimeout(() => {
-            productos.length > 0 ? resolve(productos) : rejected('No hay productos')
-          }, 1000);
+//     // const getProducts = (idCategory) => {
+//     //     console.log("id category desde asynckmock", idCategory)
+//     // } 
+//         setTimeout(() => {
+//             productos.length > 0 ? resolve(productos) : rejected('No hay productos')
+//           }, 1000);
  
-      }) 
+//       }) 
 
-      export const getProductsFilter = (categoriaId) => {
+//       export const getProductsFilter = (categoriaId) => {
 
-        const productsFilter =categoriaId? productos.filter((producto)=>producto.categoria===categoriaId): productos
+//         const productsFilter =categoriaId? productos.filter((producto)=>producto.categoria===categoriaId): productos
 
-        return new Promise((resolve,rejected) => {
-            setTimeout(() => {
-                productos.length > 0 ? resolve(productsFilter) : rejected('No hay productos')
-              }, 1000);
+//         return new Promise((resolve,rejected) => {
+//             setTimeout(() => {
+//                 productos.length > 0 ? resolve(productsFilter) : rejected('No hay productos')
+//               }, 1000);
 
-        })
+//         })
 
-      }
+//       }
 
+export const getProducts = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve(productos);
+    },2000);
+}) ;
+
+export const getProductsFilter =(id) =>{
+    return productos.find((prod) => prod.id == id);
+
+};
+
+export const getCategory = (id) => {
+    return productos.filter((prod) => prod.categoria === id);
+};
