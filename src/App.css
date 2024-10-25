@@ -38,23 +38,22 @@ nav ul li a{
 
 } 
 
-div h2{
-  align-items: center;
-} 
 
-.cardsProduct{
+
+.productCard{
+  display: inline-block;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+  margin:5px ;
+  max-width: 100%;
   
-  display:inline-block;
-  background-color: rgb(235, 231, 229);
-  text-align: center;
-  margin-left: 90px;
-
+  
 }
 
-.cardsProduct img{
-  width:80%; 
-    height:80%; 
-    margin: 10%;
-    margin-left: 10%;
-    justify-content: center;
+.productCard img{
+  height: 400px;
+  width: 235px;
+  
+ 
 }
