@@ -15,7 +15,7 @@ function ProductCard({lista}) {
       <Card.Body>
         <Card.Title>{lista.name}</Card.Title>
         <Card.Text>
-            <p> Categoria: {lista.category}</p>
+            <p> Categ: {lista.category}</p>
             <p>Precio: {lista.price}</p>
        
         </Card.Text>

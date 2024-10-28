@@ -13,8 +13,9 @@ export const Navbar = () => {
                 <h1>Natura Cosmeticos</h1>
                 <ul>
                      <li><a href="#"></a><Button variant="outline-light">Tienda</Button></li>
-                    <li><a href="#"></a><Button variant="outline-light" >Quienes somos</Button></li>
-                    <li><a href="#"></a><Button variant="outline-light" >Contacto</Button></li> 
+                    <li><a href="#"></a><Button variant="outline-light" >Fragancia</Button></li>
+                    <li><a href="#"></a><Button variant="outline-light" >Cuidados Diarios</Button></li> 
+                    <li><a href="#"></a><Button variant="outline-light" >Cabello</Button></li> 
                                          
                 </ul>
                 <CartwidgetA/>

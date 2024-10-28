@@ -8,8 +8,7 @@
   background-color: rgb(175, 73, 25);
   color: white;
   outline: none ;
-
-
+  
 } 
 
 
@@ -43,17 +42,24 @@ nav ul li a{
 .productCard{
   display: inline-block;
   justify-content: center;
-  gap: 20px;
   padding: 50px;
-  margin:5px ;
-  max-width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 10px;
+  align-items: center;
+  font-size: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
-  
+
+
 }
 
 .productCard img{
-  height: 400px;
-  width: 235px;
-  
+  display: flex;
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+  align-items: center;
+
  
 }

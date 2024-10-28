@@ -9,7 +9,7 @@ function TaskList({productList}) {
 
     return(
         <>
-       <h2> lista de productos </h2>
+       <h2> Lista de Productos </h2>
        {ProductList.map(lista => (
         <ProductCard key={lista.id} lista={lista} />
        ) )}
