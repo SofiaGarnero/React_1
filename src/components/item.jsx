@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 
 function ProductCard({lista}) {
+    
 
     return(
         <>

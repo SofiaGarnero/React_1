@@ -109,10 +109,14 @@ export const ProductList = [
     ]
     
    
-   const promesa = new Promise((resolve, reject) => {
+   export const getProducts = new Promise((resolve) => {
  
            setTimeout(() => {
             resolve(ProductList);
            }, 3000);
-        }
-    )
+        } );
+
+        export const getProduct =(id) => {
+            return ProductList.find((prod) => prod.id == id)
+        };
+

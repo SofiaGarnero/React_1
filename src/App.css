@@ -8,24 +8,31 @@
   background-color: rgb(175, 73, 25);
   color: white;
   outline: none ;
-  
+  text-decoration: none;
 } 
+
+.Navbar1 h1 a{
+  text-decoration: none;
+}
 
 
 nav ul{
   display: flex;
+  
 }
+
 
 nav ul li{
   list-style: none;
   font-size: large;
   margin-top: 5%;
-
+ 
 }
 
 nav ul li a{
   font-size: large;
   padding: 0.5rem;
+  text-decoration: none;
 
 }
 
