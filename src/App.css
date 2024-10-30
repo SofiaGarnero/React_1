@@ -1,5 +1,7 @@
 
-
+body {
+  display: grid;
+}
 .Navbar1{
 
   display: flex;
@@ -62,11 +64,26 @@ nav ul li a{
 }
 
 .productCard img{
-  display: flex;
+  display: ;
   height: 250px;
   width: 200px;
   object-fit: cover;
   align-items: center;
 
+ 
+}
+
+div .CardIndividual {
+  display: flex;
+  justify-content: center;
+   min-height: 50vh; /* Asegura que ocupe toda la altura de la pantalla */
+   text-align: center;
+  }
+
+div .CardIndividual .card-img{
+  display: block;
+  margin: auto;
+  width: 12rem;
+  align-content: center;
  
 }
