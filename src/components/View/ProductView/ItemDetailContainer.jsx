@@ -12,6 +12,7 @@ function ProductView (){
      useEffect(()=> {
        setProduct(getProduct(id)); 
      },[]);
+     
 
     return(
       <article className='CardIndividual'>

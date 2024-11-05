@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 ;
 
 
@@ -21,12 +21,12 @@ function ProductCard({lista}) {
             <p>Precio: {lista.price}</p>
        
         </Card.Text>
-        <Button variant="primary"><Link to={`/Product/${lista.id}`}>More details</Link></Button>
+        <Button variant="primary"><NavLink to={`/Product/${lista.id}`}activeclassname="currentCategory" className="text-white">More details</NavLink></Button>
        </Card.Body>
      </Card>   
         </article>
         </>
-    //    
+    //<NavLink to={'/'} activeclassname="currentCategory" className="text-white">    
     )
 }
 

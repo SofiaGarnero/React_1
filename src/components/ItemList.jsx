@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "./item";
 import { getProducts, ProductList } from "./ProductView/asynmock"
 
-function TaskList({productList}) {
+function TaskList() {
 
     const [products, setProducts] = useState([]);
     
@@ -13,8 +13,8 @@ function TaskList({productList}) {
 
     return(
         <>
-       {ProductList.map(lista => (
-        <ProductCard key={lista.id} lista={lista} />
+       {products.map(product => (
+        <ProductCard key={product.id} lista={product} />
        ) )}
         </>
     );
