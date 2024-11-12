@@ -5,12 +5,17 @@ import { getProduct } from '../../ProductView/asynmock';
 import { useContext, useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from '../../../context/CartContext';
+import ReactLoading from 'react-loading';
+
 
 function ProductView() {
   const [Product, setProduct] = useState(null);
   const [count, setCount] = useState(1);
   const { id } = useParams();
   const [,,addItem] = useContext(CartContext);
+  const [isLoading, setIsLoading] = useState(true);
+  const [type, setType] = useState('spin'); 
+  const [color, setColor] = useState('#000');
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -19,6 +24,12 @@ function ProductView() {
     };
     fetchProduct();
   }, [id]);
+  
+  useEffect(()=> {
+    const timer = setTimeout(()=> {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
 
   const increaseCount = () => setCount(count + 1);
   const decreaseCount = () => {
@@ -27,6 +38,10 @@ function ProductView() {
 
   if (!Product) {
     return <p>Cargando producto...</p>; // Mensaje de carga
+  }
+
+  if (isLoading) {
+    return <ReactLoading type={type} color={color} height={66} width={37} />;
   }
 
   const handleClick = () => {
