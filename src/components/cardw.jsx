@@ -4,11 +4,12 @@ import { CartContext } from "../context/CartContext";
 
 const CartwidgetA = () => {
 
-  const [cart] = useContext(CartContext);
+  const {cart} = useContext(CartContext);
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
    return(
     <>
-       <Button variant="dark">🛒 <p>{cart.length}</p></Button>
+       <Button variant="dark">🛒 <p>{totalItems}</p></Button>
       
       </>
        

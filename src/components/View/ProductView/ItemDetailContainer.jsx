@@ -12,7 +12,7 @@ function ProductView() {
   const [Product, setProduct] = useState(null);
   const [count, setCount] = useState(1);
   const { id } = useParams();
-  const [,,addItem] = useContext(CartContext);
+  const {addItem,removeItem,clearCart} = useContext(CartContext);
   const [isLoading, setIsLoading] = useState(true);
   const [type, setType] = useState('spin'); 
   const [color, setColor] = useState('#000');

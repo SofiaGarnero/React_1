@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import CartwidgetA from './cardw'
 import { ProductList } from "./ProductView/asynmock";
 import { Link, NavLink } from "react-router-dom";
+import Cart from "./Cart";
 
 
 export const Navbar = () => {
@@ -19,7 +20,8 @@ export const Navbar = () => {
                     <li><a href="#"></a><Button variant="outline-light" ><NavLink to={'/Cabellos'} activeclassname="currentCategory" className="text-white">Cabello</NavLink></Button></li> 
                                          
                 </ul>
-                <CartwidgetA/>
+                
+                <Link to="/cart"><CartwidgetA /></Link> 
             </nav> 
             
         </div>
